@@ -54,6 +54,7 @@
                 <version>${jacoco.version}</version>
                 <executions>
                     <execution>
+                    <phase>none</phase>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>

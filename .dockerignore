@@ -3,3 +3,8 @@ target
 *.iml
 *.log
 .DS_Store
+*.jar
+*.class
+node_modules
+.env
+.vscode
