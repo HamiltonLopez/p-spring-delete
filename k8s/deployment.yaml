@@ -5,7 +5,7 @@ metadata:
   labels:
     app: students-delete-service
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: students-delete-service
@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
         - name: students-delete-service
-          image: students-delete-service:latest
-          imagePullPolicy: Never
+          image: hamiltonlg/p-spring-delete-service:sha-6d5bcf7
           ports:
             - containerPort: 8085
           env:
