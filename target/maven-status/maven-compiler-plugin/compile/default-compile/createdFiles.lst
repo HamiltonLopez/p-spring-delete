@@ -1,0 +1,5 @@
+com/example/studentsdelete/model/Student.class
+com/example/studentsdelete/repository/StudentRepository.class
+com/example/studentsdelete/StudentDeleteApplication.class
+com/example/studentsdelete/controller/StudentDeleteController.class
+com/example/studentsdelete/service/StudentDeleteService.class

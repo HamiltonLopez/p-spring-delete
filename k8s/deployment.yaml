@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: students-delete-service
+  labels:
+    app: students-delete-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: students-delete-service
+  template:
+    metadata:
+      labels:
+        app: students-delete-service
+    spec:
+      containers:
+        - name: students-delete-service
+          image: students-delete-service:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8085
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mariadb://mariadb-service:3306/studentsdb
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "200m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m" 
